@@ -1,6 +1,6 @@
 function Square(props) {
     return(
-        <div className="square">
+        <div className="square" onClick={() => props.click(props.value)}>
             {props.value}
         </div>
     )
