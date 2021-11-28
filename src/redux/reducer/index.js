@@ -1,5 +1,5 @@
 const initialState = {
-    displayValue: 0,
+    displayValue: '',
     calculatedValue: 0
 }
 
@@ -8,7 +8,7 @@ const rootReducer = (state = initialState, action) => {
         case "UPDATE_DISPLAY_VALUE": 
             return {...state, displayValue: action.payload}
         case "CALCULATE_VALUE":
-            return {...state}
+            return {...state, calculatedValue: action.payload}
         case "CLEAR": 
             return {...initialState}
         default: return { ...state }

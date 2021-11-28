@@ -5,12 +5,16 @@ function Board() {
 
     const dispatch = useDispatch();
     const displayValue = useSelector((state) => state.displayValue);
-    // input value 
-    // on click of add icon show + 
 
     const numberClick = (clickedNumber) => {
-        const updatedVal = displayValue + '' + clickedNumber;
-        dispatch({type: "UPDATE_DISPLAY_VALUE", payload: updatedVal})
+        
+       if((clickedNumber) === "=") {
+            const total = eval(displayValue);
+            dispatch({type: 'CALCULATE_VALUE', payload: total});
+        } else {
+            const updatedVal = displayValue + '' + clickedNumber;
+            dispatch({type: "UPDATE_DISPLAY_VALUE", payload: updatedVal})
+        }
     }
 
     const clear = () => {
@@ -23,26 +27,25 @@ function Board() {
                 <Square value={1} click={numberClick}/>
                 <Square value={2} click={numberClick}/>
                 <Square value={3} click={numberClick}/>
-                <Square value={'='} click={numberClick}/>
+                <Square value={'/'} click={numberClick}/>
             </div>
-           <hr/>
             <div className="row">
                 <Square value={4} click={numberClick}/>
                 <Square value={5} click={numberClick}/>
                 <Square value={6} click={numberClick}/>
                 <Square value={'+'} click={numberClick}/>
             </div>
-           <hr/>
             <div className="row">
                 <Square value={7} click={numberClick}/>
                 <Square value={8} click={numberClick}/>
                 <Square value={9} click={numberClick}/>
                 <Square value={'-'} click={numberClick}/>
             </div>
-            <hr/>
             <div className="row">
-                <Square value={'CLEAR'} click={clear}/>
+                <Square value={'C'} click={clear}/>
+                <Square value={'/'} click={numberClick}/>
                 <Square value={0} click={numberClick}/>
+                <Square value={'='} click={numberClick}/>
             </div>
             <Input/>
         </div>

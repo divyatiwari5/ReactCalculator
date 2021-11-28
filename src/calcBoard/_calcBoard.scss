@@ -4,18 +4,11 @@
     border: 2px solid black;
     width: 250px;
     margin: auto;
-    height: 340px;
     margin-top: 150px;
 
     & > .row {
         display: flex;
         justify-content: space-between;
-        height: 50px;
-        align-items: center;
-        margin: 0 30px;
-    }
-
-    hr {
-        width: 100%;
+        background: lightgray;
     }
 }

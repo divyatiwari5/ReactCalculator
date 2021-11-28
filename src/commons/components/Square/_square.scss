@@ -1,2 +1,12 @@
 .square {
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    display: flex;
+    background: rgb(221, 221, 221);
+    &:hover{
+        cursor: pointer;
+    }
 }
