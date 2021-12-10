@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import { Input, Square } from "../commons"
+import {evaluate} from "mathjs";
 
 function Board() {
 
@@ -9,7 +10,7 @@ function Board() {
     const numberClick = (clickedNumber) => {
         
        if((clickedNumber) === "=") {
-            const total = eval(displayValue);
+            const total = evaluate(displayValue);
             dispatch({type: 'CALCULATE_VALUE', payload: total});
         } else {
             const updatedVal = displayValue + '' + clickedNumber;
