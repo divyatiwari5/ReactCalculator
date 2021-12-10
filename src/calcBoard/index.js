@@ -27,7 +27,7 @@ function Board() {
                 <Square value={1} click={numberClick}/>
                 <Square value={2} click={numberClick}/>
                 <Square value={3} click={numberClick}/>
-                <Square value={'/'} click={numberClick}/>
+                <Square value={'*'} click={numberClick}/>
             </div>
             <div className="row">
                 <Square value={4} click={numberClick}/>
