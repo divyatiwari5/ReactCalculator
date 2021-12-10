@@ -1,7 +1,9 @@
+@import "./../styles/variables";
+
 .board {
     display: flex;
     flex-direction: column-reverse;
-    border: 2px solid black;
+    border: 10px solid $lightGrey;
     width: 250px;
     margin: auto;
     margin-top: 150px;
@@ -9,6 +11,6 @@
     & > .row {
         display: flex;
         justify-content: space-between;
-        background: lightgray;
+        background: $lightGrey;
     }
 }

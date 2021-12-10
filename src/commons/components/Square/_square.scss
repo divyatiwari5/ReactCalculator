@@ -5,8 +5,11 @@
     align-items: center;
     margin: 4px;
     display: flex;
-    background: rgb(221, 221, 221);
     &:hover{
         cursor: pointer;
+    }
+    &:active{
+        background: rgb(221, 221, 221);
+        border-radius: 5px;
     }
 }
