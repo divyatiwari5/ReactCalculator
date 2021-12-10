@@ -3,7 +3,10 @@ import Board from './calcBoard';
 
 function App() {
   return (
-    <Board/>
+    <div>
+        <h1 style={{textAlign: 'center'}}>CALC</h1>
+        <Board/>
+    </div>
   );
 }
 

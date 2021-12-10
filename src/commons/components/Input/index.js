@@ -12,7 +12,6 @@ function Input() {
 
     useEffect(() => {
         setValue(display);
-        console.log({display});
     }, [display])
 
     useEffect(() => {
@@ -27,7 +26,7 @@ function Input() {
     return(
         <div>
             <input className="input" value={value} onChange={(e) => updateValue(e)}/>
-            <input className="input" value={'= ' + total}/>
+            <input className="input" value={'= ' + total} readOnly/>
         </div>
     )
 }

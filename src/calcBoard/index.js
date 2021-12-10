@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from "react-redux"
-import { Input, Square } from "../commons"
+import { useDispatch, useSelector } from "react-redux";
+import { Input, Square } from "../commons";
 import {evaluate} from "mathjs";
 
 function Board() {
